@@ -43,4 +43,9 @@ $(document).ready(function () {
         //$('.absolute-wrapper').removeClass('slide-in');
 
     });
+
+   $('#toggle_completed_items').hide();
+   $('#completed_items').click(function(){
+      $('#toggle_completed_items').fadeToggle("slow");
+   });
 })

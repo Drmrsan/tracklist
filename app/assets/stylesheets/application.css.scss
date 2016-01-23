@@ -17,10 +17,8 @@
 
 body{
   font-family: 'Roboto';
-  background-color: #82C4CA;
+  background-color: #a7ced1;
 }
-
-
 
 .alert {
     padding: 15px;
@@ -50,10 +48,9 @@ body{
   float:right;
 }
 
-
 .landing-page{
   text-align:center;
-  margin-top: 50px;
+  margin-top: 100px;
   h1{
     font-weight: 700;
     font-size: 4em;
@@ -65,17 +62,54 @@ body{
 }
 
 .task_list_title{
-  color: #ffffff;
-  i.current_user{
-    font-size: .7em;
-    font-weight: 400;
-  }
-  i.created_at{
-    font-size: .5em;
-    opacity: 60%;
-  }
+  color: #eeeeee;
+  background: #706389;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+    i.current_user{
+      font-size: .7em;
+      font-weight: 400;
+    }
+    i.created_at{
+      font-size: .5em;
+      opacity: 60%;
+    }
 }
 
+.edit_task_list{
+  text-align:center;
+}
+
+.panel.panel-default.grey{
+  background:#eeeeee;
+  opacity: .4;
+}
+
+li.user_welcome{
+  padding: 15px;
+}
+
+.sign_out_sidebar{
+    color:red;
+  }
+
+.completed_items_wrapper{
+  margin-bottom: 20px;
+}
+
+#completed_items{
+  background: #eeeeee;
+  padding: 5px;
+  text-decoration: none;
+  color: #706389;
+  font-size: 12px;
+  border-radius: 3px;
+  &:hover{
+    color: #eeeeee;
+    background: #706389;
+  }
+}
 
 // ==============================================//
 
@@ -86,6 +120,11 @@ body{
 .row {
   margin-right: 0;
   margin-left: 0;
+}
+
+.sidebar_icon i{
+  padding-right:10px;
+  color: #706389;
 }
 
 

@@ -5,8 +5,7 @@
 			<div class="col-lg-6 col-lg-offset-3 landing-page">
 
 				<% if user_signed_in? %>
-						<h1 class="task_list_title">Let the Tasks be strong within you, <i class="current_user"><%= current_user.email %></i></h1>
-						<p><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
+						<h1 class="task_list_title">Let the Tasks be strong within you!</h1>
 				<% else %>
 					<h1>Welcome!</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quae quod quis, nobis dignissimos nisi obcaecati libero pariatur nihil non labore quaerat iste totam commodi cumque magnam voluptatem asperiores maiores?</p>
