@@ -1,5 +1,6 @@
 class TaskItem < ActiveRecord::Base
   belongs_to :task_list
+  belongs_to :user
 
   scope :complete, -> { where("completed_at is not null") }
   scope :incomplete, -> { where(completed_at: nil) }

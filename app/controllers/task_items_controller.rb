@@ -16,7 +16,6 @@ class TaskItemsController < ApplicationController
 
 	def destroy
 		@task_item.destroy
-		
 		redirect_to @task_list
 	end
 

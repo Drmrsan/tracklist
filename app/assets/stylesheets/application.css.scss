@@ -64,8 +64,16 @@ body{
   }
 }
 
-.task-list-title{
+.task_list_title{
   color: #ffffff;
+  i.current_user{
+    font-size: .7em;
+    font-weight: 400;
+  }
+  i.created_at{
+    font-size: .5em;
+    opacity: 60%;
+  }
 }
 
 

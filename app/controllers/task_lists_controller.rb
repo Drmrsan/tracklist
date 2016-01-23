@@ -1,7 +1,8 @@
 class TaskListsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_task_list, only: [:show, :edit, :update, :destroy]
   before_action :set_all_tasks, only: [:index, :show, :edit]
-
+  
   def index
   end
 
@@ -9,15 +10,14 @@ class TaskListsController < ApplicationController
   end
 
   def new
-    @task_list = TaskList.new
+    @task_list = current_user.task_lists.build
   end
 
   def edit
   end
 
   def create
-    @task_list = TaskList.new(task_list_params)
-
+    @task_list = current_user.task_lists.create(task_list_params)
       if @task_list.save
         redirect_to @task_list, notice: 'Task list was successfully created.'
       else
