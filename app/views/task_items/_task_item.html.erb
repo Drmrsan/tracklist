@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+	<div class="panel-body">
+
+		<% if task_item.completed? %>
+			<%= link_to complete_task_list_task_item_path(@task_list, task_item), method: :patch, class: "check-item" do  %>
+				<i class="fa fa-reply"></i>
+			<% end %>
+			<div class="status-item">
+				<strike><%= task_item.title %></strike>
+			</div>
+
+		<% else %>
+			<%= link_to complete_task_list_task_item_path(@task_list, task_item), method: :patch, class: "check-item" do %>
+				<i class="fa fa-check"></i>
+			<% end %>
+			<div class="status-item">
+				<%= task_item.title %>
+			</div>
+		<% end %>
+
+		<%= link_to task_list_task_item_path(@task_list, task_item.id), method: :delete, data: {confirm: "Are yo sure?"}, class: "delete-item" do %>
+		<i class="fa fa-trash"></i>
+		<% end %>
+	</div>
+</div>

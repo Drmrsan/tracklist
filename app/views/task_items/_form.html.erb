@@ -1,0 +1,6 @@
+<%= simple_form_for ([@task_list, @task_list.task_items.build]) do |f|  %>
+	<div class="input-group">
+  		<span class="input-group-addon"><i class= "fa fa-plus"></i></span>
+		<%= f.input :title, placeholder:"Write task item..." , label:false%>
+	</div>
+<% end %>
