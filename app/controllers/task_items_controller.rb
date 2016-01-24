@@ -14,6 +14,17 @@ class TaskItemsController < ApplicationController
 		end
 	end
 
+	def edit
+	end
+
+	def update
+      if @task_item.update(task_items_params)
+        redirect_to @task_list, notice: 'Task list was successfully updated.'
+      else
+        render :edit
+      end
+  end
+
 	def destroy
 		@task_item.destroy
 		redirect_to @task_list

@@ -46,6 +46,7 @@ body{
 
 .delete-item{
   float:right;
+  padding-left: 10px;
 }
 
 .landing-page{
@@ -69,18 +70,32 @@ body{
 .task_list_title{
   color: #eeeeee;
   background: #706389;
-  padding: 30px;
+  padding: 10px;
   border-radius: 50px;
   text-align: center;
     i.current_user{
       font-size: .7em;
       font-weight: 400;
     }
-    i.created_at{
+    p.created_at{
+      padding-top: 10px;
       font-size: .5em;
       opacity: 60%;
     }
+    i{
+      color:#eeeeee;
+      font-size: .6em;
+    }
 }
+
+.task_list_title_index{
+    color: #eeeeee;
+    background: #706389;
+    padding: 50px;
+    border-radius: 50px;
+    text-align: center;
+}
+
 
 .edit_task_list{
   text-align:center;

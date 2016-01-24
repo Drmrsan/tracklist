@@ -11,7 +11,7 @@
 		<i class="fa fa-reply"></i>
 	<% end %>
 	<div class="status-item">
-		<strike><%= task_item.title %></strike><p class="text-muted" style="font-size:.8em;">created by <%= task_item.user.email  %></p>
+		<strike><%= task_item.title %></strike> <i class="text-muted" style="font-size:.8em;">created by <%= task_item.user.email  %></i>
 	</div>
 
 <% else %>
@@ -19,12 +19,16 @@
 		<i class="fa fa-check"></i>
 	<% end %>
 	<div class="status-item">
-		<%= task_item.title %><p class="text-muted" style="font-size:.8em;">created by <%= task_item.user.email  %></p>
+		<%= task_item.title %> <i class="text-muted" style="font-size:.8em;">created by <%= task_item.user.email  %></i>
 	</div>
 <% end %>
 
+
 <%= link_to task_list_task_item_path(@task_list, task_item.id), method: :delete, data: {confirm: "Are yo sure?"}, class: "delete-item" do %>
-<i class="fa fa-trash"></i>
+	<i class="fa fa-trash"></i>
+<% end %>
+<%= link_to edit_task_list_task_item_path(@task_list, task_item.id), class: "delete-item" do %>
+	<i class="fa fa-edit"></i>
 <% end %>
 
 	</div>
