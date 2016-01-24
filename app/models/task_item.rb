@@ -1,5 +1,5 @@
 class TaskItem < ActiveRecord::Base
-  belongs_to :task_list, dependent: :nullify
+  belongs_to :task_list
   belongs_to :user
 
   scope :complete, -> { where("completed_at is not null") }
