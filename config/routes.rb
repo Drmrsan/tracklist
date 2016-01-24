@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   		end
   	end
   end
-  root 'task_lists#index'
+  root 'static_pages#index'
 end

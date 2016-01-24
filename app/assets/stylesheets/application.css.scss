@@ -57,15 +57,20 @@ body{
     color: #ffffff;
   }
   p{
+    font-size: 1.3em;
     color: #ffffff;
+  }
+  p i{
+    color: #ffffff;
+    font-size: 1.3em;
   }
 }
 
 .task_list_title{
   color: #eeeeee;
   background: #706389;
-  padding: 10px;
-  border-radius: 20px;
+  padding: 30px;
+  border-radius: 50px;
   text-align: center;
     i.current_user{
       font-size: .7em;
@@ -108,6 +113,23 @@ li.user_welcome{
   &:hover{
     color: #eeeeee;
     background: #706389;
+  }
+}
+
+.index_text{
+  font-size: 1.5em;
+}
+
+.login_button{
+  background: #eeeeee;
+  padding: 5px;
+  color: #706389;
+  font-size: 12px;
+  border-radius: 3px;
+  &:hover{
+    color: #eeeeee;
+    background: #706389;
+    text-decoration: none;
   }
 }
 
@@ -216,7 +238,13 @@ li.user_welcome{
 }
 .side-menu .brand-name-wrapper .navbar-brand {
   display: block;
+  padding:5px;
 }
+
+.navbar-brand {
+  line-height: 35px;
+}
+
 .side-menu #search {
   position: relative;
   z-index: 1000;
@@ -256,6 +284,11 @@ li.user_welcome{
 .side-body {
   margin-left: 310px;
 }
+.side-body.hide_margin{
+  margin-left: 0;
+}
+
+
 /* small screen */
 @media (max-width: 768px) {
   .side-menu {
