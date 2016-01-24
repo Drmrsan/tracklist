@@ -5,8 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-  	@task_list = TaskList.find(params[:id])
-  	@task_list.user_id = current_user.id
+    @task_list.user_id = current_user.id
   end
   private
 

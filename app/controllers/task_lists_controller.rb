@@ -18,6 +18,7 @@ class TaskListsController < ApplicationController
 
   def create
     @task_list = current_user.task_lists.create(task_list_params)
+    @task_list.user_id = current_user.id
       if @task_list.save
         redirect_to @task_list, notice: 'Task list was successfully created.'
       else

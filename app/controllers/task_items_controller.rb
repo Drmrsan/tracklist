@@ -6,7 +6,7 @@ class TaskItemsController < ApplicationController
 
 	def create
 		@task_item = @task_list.task_items.create(task_items_params)
-
+		@task_item.user_id = current_user.id
 		if @task_item.save
 			redirect_to @task_list, notice: "Task item successfully added"
 		else
@@ -27,7 +27,7 @@ class TaskItemsController < ApplicationController
 	private
 
 	def task_items_params
-		params[:task_item].permit(:title)
+		params.require(:task_item).permit(:title)
 	end
 
 	def find_task_list

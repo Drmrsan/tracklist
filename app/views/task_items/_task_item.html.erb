@@ -11,7 +11,7 @@
 		<i class="fa fa-reply"></i>
 	<% end %>
 	<div class="status-item">
-		<strike><%= task_item.title %></strike>
+		<strike><%= task_item.title %></strike><p class="text-muted" style="font-size:.8em;">created by <%= task_item.user.email  %></p>
 	</div>
 
 <% else %>
@@ -19,7 +19,7 @@
 		<i class="fa fa-check"></i>
 	<% end %>
 	<div class="status-item">
-		<%= task_item.title %>
+		<%= task_item.title %><p class="text-muted" style="font-size:.8em;">created by <%= task_item.user.email  %></p>
 	</div>
 <% end %>
 
