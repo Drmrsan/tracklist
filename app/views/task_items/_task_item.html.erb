@@ -10,6 +10,11 @@
 	<%= link_to complete_task_list_task_item_path(@task_list, task_item), method: :patch, class: "check-item" do  %>
 		<i class="fa fa-reply"></i>
 	<% end %>
+
+	<%= link_to task_list_task_item_path(@task_list, task_item.id), method: :delete, data: {confirm: "Are yo sure?"}, class: "delete-item" do %>
+	<i class="fa fa-trash"></i>
+	<% end %>
+
 	<div class="status-item">
 		<strike><%= task_item.title %></strike> <i class="text-muted" style="font-size:.8em;">created by <%= task_item.user.email  %></i>
 	</div>
@@ -18,18 +23,29 @@
 	<%= link_to complete_task_list_task_item_path(@task_list, task_item), method: :patch, class: "check-item" do %>
 		<i class="fa fa-check"></i>
 	<% end %>
-	<div class="status-item">
-		<%= task_item.title %> <i class="text-muted" style="font-size:.8em;">created by <%= task_item.user.email  %></i>
-	</div>
-<% end %>
 
-
-<%= link_to task_list_task_item_path(@task_list, task_item.id), method: :delete, data: {confirm: "Are yo sure?"}, class: "delete-item" do %>
+	<%= link_to task_list_task_item_path(@task_list, task_item.id), method: :delete, data: {confirm: "Are yo sure?"}, class: "delete-item" do %>
 	<i class="fa fa-trash"></i>
-<% end %>
-<%= link_to edit_task_list_task_item_path(@task_list, task_item.id), class: "delete-item" do %>
-	<i class="fa fa-edit"></i>
+	<% end %>
+	<%= link_to edit_task_list_task_item_path(@task_list, task_item.id), class: "delete-item" do %>
+		<i class="fa fa-edit"></i>
+	<% end %>
+
+	<div class="status-item">
+		<%= link_to task_item.title, "#" + task_item.id.to_s , class: "task_item_title", 'data-toggle' => "collapse", 'aria-expanded' => "false", 'aria-controls' => "task_description" %>
+		<i class="text-muted" style="font-size:.8em;">created by <%= task_item.user.email  %></i>
+
+	</div>
+	<div class="collapse" id="<%= task_item.id.to_s %>">
+		  <div class="well">
+		    <p><b>Description</b></p>
+		    <p><%= task_item.description %></p>
+			<p><b>Due date:</b></p>
+			<%= task_item.duedate %>
+		  </div>
+		</div>
 <% end %>
 
 	</div>
 </div>
+

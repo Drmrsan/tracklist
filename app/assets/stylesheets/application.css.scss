@@ -9,7 +9,7 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+ *= require jquery-ui
  */
 
 @import "bootstrap-sprockets";
@@ -96,6 +96,13 @@ body{
     text-align: center;
 }
 
+.task_item_title{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
 
 .edit_task_list{
   text-align:center;
@@ -150,6 +157,10 @@ li.user_welcome{
 
 p .text-muted.task_item_usr {
   font-size: .3em;
+}
+
+.well {
+  margin: 20px;
 }
 
 // ==============================================//

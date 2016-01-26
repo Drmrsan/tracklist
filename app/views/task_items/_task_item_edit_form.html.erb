@@ -1,5 +1,9 @@
 <%= simple_form_for([@task_list, @task_item]) do |f| %>
-  <div class="">
-    <%= f.input :title, placeholder: "task name...", label:false %>
-  </div>
+  <div class="input-group">
+  		<!-- <span class="input-group-addon"><i class= "fa fa-plus"></i></span> -->
+		<%= f.input :title, placeholder:"Write task item..." , label:false%>
+		<%= f.input :description %>
+		<%= f.text_field :duedate, class:"datepicker" %>
+		<%= f.button :submit %>
+	</div>
 <% end %>

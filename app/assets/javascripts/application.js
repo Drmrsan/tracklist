@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
@@ -48,4 +49,6 @@ $(document).ready(function () {
    $('#completed_items').click(function(){
       $('#toggle_completed_items').fadeToggle("slow");
    });
+
+   $('.datepicker').datepicker({format: 'yyyy-mm-dd'});
 })

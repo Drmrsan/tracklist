@@ -38,7 +38,7 @@ class TaskItemsController < ApplicationController
 	private
 
 	def task_items_params
-		params.require(:task_item).permit(:title)
+		params.require(:task_item).permit(:title, :description, :duedate)
 	end
 
 	def find_task_list
