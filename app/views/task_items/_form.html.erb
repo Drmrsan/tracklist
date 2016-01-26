@@ -15,7 +15,7 @@
 	      <div class="modal-body">
 	        <%= f.input :title %>
 	        <%= f.input :description %>
-	        <%= f.text_field :duedate, class: "datepicker" %>
+	        <%= f.text_field :duedate, class: "datepicker", :data => {provide: 'datepicker'} %>
 	      </div>
 	      <div class="modal-footer">
 	        <%= f.button :submit %>

@@ -50,5 +50,6 @@ $(document).ready(function () {
       $('#toggle_completed_items').fadeToggle("slow");
    });
 
-   $('.datepicker').datepicker({format: 'yyyy-mm-dd'});
+   $('.datepicker').datepicker(
+      { dateFormat: 'dd-mm-yy' });
 })
