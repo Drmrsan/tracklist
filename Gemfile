@@ -27,12 +27,17 @@ group :development do
   gem 'spring'
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
   gem "binding_of_caller"
+  gem 'capistrano', '~> 3.4'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rails', '~> 1.1', '>= 1.1.6'
+  gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
 end
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'puma'
+  # gem 'puma'
+  gem 'unicorn'
 end
 
 
